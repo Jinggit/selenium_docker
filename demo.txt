@@ -1,0 +1,11 @@
+*** Settings ***
+Library           Selenium2Library
+
+*** Test Cases ***
+Baidu
+    Open Browser    http://www.baidu.com    gc
+    Maximize Browser Window
+    Input Text    kw    Selenium2Library
+    Submit Form
+    Wait Until Page Contains    robotframework-selenium2library    60
+    Close Browser
